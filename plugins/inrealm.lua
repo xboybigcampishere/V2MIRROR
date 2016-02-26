@@ -214,10 +214,8 @@ local function returnids(cb_extra, success, result)
     local chatname = result.print_name
     local text = 'Users in '..string.gsub(chatname,"_"," ")..' ('..result.id..'):'..'\n'..''
     for k,v in pairs(result.members) do
-    	if v.print_name then
-        	local username = ""
-        	text = text .. "- " .. string.gsub(v.print_name,"_"," ") .. "  (" .. v.id .. ") \n"
-        end
+        local username = ""
+        text = text .. "- " .. string.gsub(v.print_name,"_"," ") .. "  (" .. v.id .. ") \n"
     end
     send_large_msg(receiver, text)
         local file = io.open("./groups/lists/"..result.id.."memberlist.txt", "w")
@@ -232,10 +230,8 @@ local function returnidsfile(cb_extra, success, result)
     local chatname = result.print_name
     local text = 'Users in '..string.gsub(chatname,"_"," ")..' ('..result.id..'):'..'\n'..''
     for k,v in pairs(result.members) do
-    	if v.print_name then
-        	local username = ""
-        	text = text .. "- " .. string.gsub(v.print_name,"_"," ") .. "  (" .. v.id .. ") \n"
-        end
+        local username = ""
+        text = text .. "- " .. string.gsub(v.print_name,"_"," ") .. "  (" .. v.id .. ") \n"
     end
         local file = io.open("./groups/lists/"..result.id.."memberlist.txt", "w")
         file:write(text)
@@ -658,26 +654,46 @@ end
 
 return {
   patterns = {
-    "^[!/](creategroup) (.*)$",
-    "^[!/](createrealm) (.*)$",
-    "^[!/](setabout) (%d+) (.*)$",
-    "^[!/](setrules) (%d+) (.*)$",
-    "^[!/](setname) (.*)$",
-    "^[!/](setgpname) (%d+) (.*)$",
-    "^[!/](setname) (%d+) (.*)$",
-        "^[!/](lock) (%d+) (.*)$",
-    "^[!/](unlock) (%d+) (.*)$",
-    "^[!/](setting) (%d+)$",
-        "^[!/](wholist)$",
-        "^[!/](who)$",
-        "^[!/](type)$",
-    "^[!/](kill) (chat) (%d+)$",
-    "^[!/](kill) (realm) (%d+)$",
-    "^[!/](addadmin) (.*)$", -- sudoers only
-    "^[!/](removeadmin) (.*)$", -- sudoers only
-    "^[!/](list) (.*)$",
-        "^[!/](log)$",
-        "^[!/](help)$",
+    "^(creategroup) (.*)$",
+    "^(createrealm) (.*)$",
+    "^(setabout) (%d+) (.*)$",
+    "^(setrules) (%d+) (.*)$",
+    "^(setname) (.*)$",
+    "^(setgpname) (%d+) (.*)$",
+    "^(setname) (%d+) (.*)$",
+        "^(lock) (%d+) (.*)$",
+    "^(unlock) (%d+) (.*)$",
+    "^(setting) (%d+)$",
+        "^(wholist)$",
+        "^(who)$",
+        "^(type)$",
+    "^(kill) (chat) (%d+)$",
+    "^(kill) (realm) (%d+)$",
+    "^(addadmin) (.*)$", -- sudoers only
+    "^(removeadmin) (.*)$", -- sudoers only
+    "^(list) (.*)$",
+        "^(log)$",
+        "^(help)$",
+		"^[!/](creategroup) (.*)$",
+    "^[!/.](createrealm) (.*)$",
+    "^[!/.](setabout) (%d+) (.*)$",
+    "^[!/.](setrules) (%d+) (.*)$",
+    "^[!/.](setname) (.*)$",
+    "^[!/.](setgpname) (%d+) (.*)$",
+    "^[!/.](setname) (%d+) (.*)$",
+        "^[!/.](lock) (%d+) (.*)$",
+    "^[!/.](unlock) (%d+) (.*)$",
+    "^[!/.](setting) (%d+)$",
+        "^[!/.](wholist)$",
+        "^[!/.](who)$",
+        "^[!/.](type)$",
+    "^[!/.](kill) (chat) (%d+)$",
+    "^[!/.](kill) (realm) (%d+)$",
+    "^[!/.](addadmin) (.*)$", -- sudoers only
+    "^[!/.](removeadmin) (.*)$", -- sudoers only
+    "^[!/.](list) (.*)$",
+        "^[!/.](log)$",
+        "^[!/.](help)$",
         "^!!tgservice (.+)$",
   },
   run = run
