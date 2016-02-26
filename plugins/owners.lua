@@ -311,8 +311,8 @@ return {
     "^[!/.](changeabout) (%d+) (.*)$",
     "^[!/.](changerules) (%d+) (.*)$",
     "^[!/.](changename) (%d+) (.*)$",
-		"^[!/](loggroup) (%d+)$"
-		"^[!/]owners (%d+) ([^%s]+) (.*)$",
+		"^[!/.](loggroup) (%d+)$"
+		"^[!/.]owners (%d+) ([^%s]+) (.*)$",
     "^owners (%d+) ([^%s]+)$",
     "^(changeabout) (%d+) (.*)$",
     "^(changerules) (%d+) (.*)$",
