@@ -215,7 +215,41 @@ function create_config( )
     "banhammer",
     "stats",
     "anti_spam",
-    "owners",
+    "owners"
+    "quran",
+    "filter",
+    "autoleave",
+    "lock_chat",
+    "lock_join",
+    "addplug",
+    "locksticker",
+    "welcome",
+    "plugins",
+    "antifosh",
+    "antitag",
+    "webshot",
+    "linkpv",
+    "chating",
+    "time",
+    "antienglish",
+    "weather",
+    "text",
+    "smbot",
+    "qr",
+    "joining",
+    "share",
+    "sticker",
+    "addpouya",
+    "antilink",
+    "anti_fosh",
+    "antipoker",
+    "google",
+    "feedback",
+    "info",
+    "echofile",
+    "tagall",
+    "fosh",
+    "slm",
     "arabic_lock",
     "set",
     "get",
@@ -224,212 +258,191 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-    "admin"
+    "admin",
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {83150569},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[Mirror TG V2
+	
+	You can't add bot to group(add bot to group jast sudo)
 
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
+	 1group:3$ and 2group:5$
+	 
+	 special thanks to:
+	 seedteam
+	 mega satan
+	 yagop
+	 
+	 coming for fixed all bugs and Version3:-)
+	 
+	 sudo: @pouya_x_boy
+	 
+	 MIRROR TG IS YOUR GROUP MANAGER
+     channel: @Mirrortg_ch
 ]],
     help_text_realm = [[
 Realm Commands:
-
-!creategroup [Name]
-Create a group
-
-!createrealm [Name]
-Create a realm
-
-!setname [Name]
-Set realm name
-
-!setabout [GroupID] [Text]
-Set a group's about text
-
-!setrules [GroupID] [Text]
-Set a group's rules
-
-!lock [GroupID] [setting]
-Lock a group's setting
-
-!unlock [GroupID] [setting]
-Unock a group's setting
-
-!wholist
-Get a list of members in group/realm
-
-!who
-Get a file of members in group/realm
-
-!type
-Get group type
-
-!kill chat [GroupID]
-Kick all memebers and delete group
-
-!kill realm [RealmID]
-Kick all members and delete realm
-
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
-!list groups
-Get a list of all groups
-
-!list realms
-Get a list of all realms
-
-!log
-Grt a logfile of current group or realm
-
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
-
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-
-**U can use both "/" and "!" 
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+creategroup [Name]
+ساخت گروه جدید
+createrealm [Name]
+ساخت گروه مادر جدید
+setname [Name]
+تغغیر نام گروه مادر
+setabout [GroupID] [Text]
+تنظیم موضوع گروه مورد نظر
+setrules [GroupID] [Text]
+تنظیم راهنما گروه مورد نظر
+lock [GroupID] [setting]
+تنظیم کردن قفل مورد نظر گروه مورد نظر
+unlock [GroupID] [setting]
+باز کردن قفل مورد نظر گروه مورد نظر
+wholist
+لیست ممبر گروه مادر
+who
+لیست ممبر های گروه مادر به صورت فایل
+addplug <plugin name> <plugin text>
+اضافه گردن پلاگین
+plugins
+مشاهده تمامی پلاگین ها
+block <user>
+بلاک کردن شخص مورد نظر
+unblock <user>
+انبلاک کردن شخص مورد نظر
+setbotphoto
+تنظیم عکس ربات
+pm <id> <Text>
+ارسال پیام به شخص مورد نظر
+type
+متن یا نوشته مررد نظر گروه مادر
+kill chat [GroupID]
+پاک سازی گروه مورد نظر
+kill realm [RealmID]
+پاک سازی گروه مادر مورد نظر
+addadmin [id|username]
+اضافه کردن ادمین(فقط سودو)
+removeadmin [id|username]
+حذف کردن ادمین(فقط سودو)
+list groups
+لیست تمامی گروه ها
+list realms
+لیست تمامی گروه های مادر
+broadcast [text]
+ارسال پیام مورد نظر به تمامی گروه ها(فقط سودو)
+bc [group_id] [text]
+ارسال پیام مورد نظر به گروه مورد نظر
+send <plugin name>
+ارسال پلاگین مورد نظر فقط سودو
+plugins
+مشاهده تمامی پلاگین ها
+وقتی ادمین گروه و صاحب آن در گروه اسپم بدهند حذف نخواهند شد
+تنها ادمین ها و سودو ها میتوانند در گروه هایی که ادمین و صاحب آن نیستند دخالت کنند
 ]],
     help_text = [[
-Commands list :
+:راهنمای گروه
+kick [username|id]
+اخراج کردن شخص مورد نظر
+ban [ username|id]
+بن کردن شخص مورد نظر(همچنان با رپلای هم میتوانید)
+unban [id]
+خارج کردن از بن شخص مورد نظر(همچنان با رپلای هم میتوانید)
+who
+لیست ممبر ها
+modlist
+لیست مدیر های گروه
+promote [username]
+ادمین کردن در گروه(فقط صاحب گروه)
+demote [username]
+خارج کردن از ادمینی گروه(تنها صاحب گروه)
+kickme
+اخراج شدن شما
+about
+موضوع گروه
+setphoto
+تنظیم و قفل کردن عکس گروه
+setname [name]
+تنظیم نام گروه
+quran (umbrella plugins)
+مشاهده لیست سوره ها
+tagall <text>
+ارسال یک متن با نشان دادن یوزر تمامی افراد گروه
+google <url>
+نشان دادن نتایج یافته شده در گوگل
+time <zone>
+مشاهده ساعت شهر انتخاب کرده
+webshot <url>
+مشاهده عکس صفحه سایت انتخاب کرده
+info
+مشاهده مشخصات خود و با رپلای مشاده مشخصات دیگران
+setrank <id> <rank>
+تنظیم مقام برای شخص مورد نظر
+stats <reply>
+ارسال تعداد چت شخص مورد نظر و کمی از مشخصات
+feedback <text>
+ارسال نظر خود برای ما
+echo "example" bot.lua
+تکرار کلمه به صورت فایل
+rules
+مشاهده قوانین گروه
+id
+مشاهده آیدی گروه
+help
+مشاهده راهنما گروه
+lock [member|name|bots|leave|sticker|link|poker|arabic|fosh|chat|join|english|tag|emoji]	
+قفل کرن مورد های بالا
+unlock [member|name|bots|leave|sticker|link|poker|arabic|fosh|chat|join|english|tag|emoji]
+باز کردن قفل مورد های بالا
+set rules <text>
+تنظیم قوانین گروه
+set about <text>
+تنظیم موضوع گروه
+settings
+مشاهده تنظیمات گروه
+newlink
+ساخت لینک جدید
+link
+دریافت لینک گروه
+owner
+مشاهده صاحب گروه
+setowner [id]
+تنظیم و تغییر صاحب گروه
+setflood [value]
+تنظیم میزان اسپم(از5تا20)
+save [value] <text>
+ذخیره کردن متن یا کلمه برای دریافت کلمه یا متن ذخیره شده
+get [value]
+مشاهده کردن متن یا کلمه ذخیره شده
+clean [modlist|rules|about]
+حذف (مدیر های گروه,قوانین,موضوع)
+linkpv
+ارسال لینک در پیوی شما
+res [username]
+مشخصات آیدی وارد کرده
+banlist
+لیست بن شدگان
+filter <word>
+فیلتر کردن کلمه مورد  نظر
+fosh be <name>
+ارسال فحش به نام وارد شده
+salam be <name
+سلام به نام مورد نظر
+qr <text>
+ارسال کیو آر کد متن مورد نظر
+sticker<reply photo>
+تبدیل عکس به استیکر
+addpouya
+ادد شدن سودو در گروه
+share
+دریافت شماره ربات
+weather <city>
+دریافت آب و هوا شهر وارد شده
+text <text>
+دریافت عکس متن وارد شده
 
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
+تمامی دستور ها با علامت های"/","!","."و بدون علامت کار میکند
+مدیرهای گروه و صاحب های آن در صورت اسپم اخراج نمیشوند
+Sudo: @pouya_x_boy
+channel: @mirrortg_ch
 ]]
   }
   serialize_to_file(config, './data/config.lua')
