@@ -215,7 +215,7 @@ function create_config( )
     "banhammer",
     "stats",
     "anti_spam",
-    "owners"
+    "owners",
     "quran",
     "filter",
     "autoleave",
