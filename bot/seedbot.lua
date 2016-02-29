@@ -216,7 +216,6 @@ function create_config( )
     "stats",
     "anti_spam",
     "owners",
-    "quran",
     "filter",
     "autoleave",
     "lock_chat",
