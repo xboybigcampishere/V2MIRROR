@@ -18,7 +18,6 @@ return {
   usage = "!echo [whatever]: echoes the msg",
   patterns = {
     "^echo +(.+) (.*)$"
-	"^[!/.](echo) +(.+) (.*)$"
   },
   run = run
 }
