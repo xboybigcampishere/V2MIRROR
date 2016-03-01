@@ -176,30 +176,15 @@ local function run(msg,matches)
     	local SEED_gbans = http.request(url)
     	local jdat = json:decode(SEED_gbans)
     	for k,v in pairs(jdat) do
-  		if not tonumber(v) == tonumber(our_id) and not is_admin2(v) then-- Ignore bot and admins :)
-  			redis:hset('user:'..v, 'print_name', k)
-  			redis:sadd('gbanned', v)
-      			print(k, v.." Globally banned")
-      		end
+  		redis:hset('user:'..v, 'print_name', k)
+  		banall_user(v)
+      		print(k, v.." Globally banned")
     	end
     end
     return
 end
 return {
   patterns = {
-	"^[!/.](pm) (%d+) (.*)$",
-	"^[!/.](import) (.*)$",
-	"^[!/.](unblock) (%d+)$",
-	"^[!/.](block) (%d+)$",
-	"^[!/.](markread) (on)$",
-	"^[!/.](markread) (off)$",
-	"^[!/.](setbotphoto)$",
-	"%[(photo)%]",
-	"^[!/.](contactlist)$",
-	"^[!/.](dialoglist)$",
-	"^[!/.](delcontact) (%d+)$",
-	"^[!/.](whois) (%d+)$",
-	"^/(sync_gbans)$"--sync your global bans with seed
 	"^(pm) (%d+) (.*)$",
 	"^(import) (.*)$",
 	"^(unblock) (%d+)$",
@@ -212,8 +197,7 @@ return {
 	"^(dialoglist)$",
 	"^(delcontact) (%d+)$",
 	"^(whois) (%d+)$",
+	"^/(sync_gbans)$"--sync your global bans with seed
   },
   run = run,
 }
---By @imandaneshi :)
---https://github.com/SEEDTEAM/TeleSeed/blob/master/plugins/admin.lua
