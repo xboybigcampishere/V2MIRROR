@@ -143,11 +143,6 @@ return {
     "^([Ss]tats) (group) (%d+)",
     "^([Ss]tats) (mirror)",-- Put everything you like :)
 		"^([Mm]irror)"-- Put everything you like :)
-		"^[!/.]([Ss]tats)$",
-    "^[!/.]([Ss]tatslist)$",
-    "^[!/.]([Ss]tats) (group) (%d+)",
-    "^[!/.]([Ss]tats) (mirror)",-- Put everything you like :)
-		"^[!/.]([Mm]irror)"-- Put everything you like :)
     }, 
   run = run
 }
