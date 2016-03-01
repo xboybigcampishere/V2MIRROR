@@ -6,8 +6,7 @@ end
 
 return {
 patterns = {
-"^[!/.](share)$"
-"^(share)$"
+"^share$"
 
 },
 run = run
