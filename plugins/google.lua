@@ -42,7 +42,6 @@ do
     usage = ' !google [terms]: Searches Google and send results',
     patterns = {
       '^google (.*)$',
-      '^[!/.](google) (.*)$'
     },
     run = run
   }
