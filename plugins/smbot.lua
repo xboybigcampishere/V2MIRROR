@@ -13,8 +13,6 @@ return {
   patterns = {
     "^(reboot)",
     "^(serverinfo)"
-	"^[!/.](reboot)",
-    "^[!/.](serverinfo)"
   },
   run = run
 }
