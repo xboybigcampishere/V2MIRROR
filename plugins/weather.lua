@@ -54,7 +54,6 @@ return {
   patterns = {
     "^weather$",
     "^(weather) (.*)$"
-	"^[!/.](weather) (.*)$"
   },
   run = run
 }
