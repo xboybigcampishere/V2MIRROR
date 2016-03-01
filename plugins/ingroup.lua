@@ -240,7 +240,7 @@ local function show_group_settingsmod(msg, data, target)
     	filter = data[tostring(msg.to.id)]['settings']['Blocked_Words']
    	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group english😎 : "..lock_english.."\nLock group name😌 : "..settings.lock_name.."\nLock group sticker : "..lock_sticker.."\nLock group photo😏 : "..settings.lock_photo.."\Lock group fosh🚥 : "..lock_fosh.."\nLock group tag🚫 : "..lock_tag.."\nLock group links🚲 : "..lock_link.."\nLock group member🏯 : "..settings.lock_member.."\nLock group poker😐 : "..lock_poker.."\nLock group chat👂 : "..lock_chat.."\nLock group jo👅in : "..lock_join.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
+  local text = "Group settings:\nLock group engli : "..lock_english.."\nLock group name : "..settings.lock_name.."\nLock group sticker : "..lock_sticker.."\nLock group photo : "..settings.lock_photo.."\Lock group fosh : "..lock_fosh.."\nLock group tag : "..lock_tag.."\nLock group links : "..lock_link.."\nLock group member : "..settings.lock_member.."\nLock group poker : "..lock_poker.."\nLock group chat : "..lock_chat.."\nLock group join : "..lock_join.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
   return text
 end
 
@@ -1550,38 +1550,6 @@ end
 
 return {
   patterns = {
-  "^[!/.](add)$",
-  "^[!/.](add) (realm)$",
-  "^[!/.](rem)$",
-  "^[!/.](rem) (realm)$",
-  "^[!/.](rules)$",
-  "^[!/.](about)$",
-  "^[!/.](setname) (.*)$",
-  "^[!/.](setphoto)$",
-  "^[!/.](promote) (.*)$",
-  "^[!/.](promote)",
-  "^[!/.](help)$",
-  "^[!/.](clean) (.*)$",
-  "^[!/.](kill) (chat)$",
-  "^[!/.](kill) (realm)$",
-  "^[!/.](demote) (.*)$",
-  "^[!/.](demote)",
-  "^[!/.](set) ([^%s]+) (.*)$",
-  "^[!/.](lock) (.*)$",
-  "^[!/.](setowner) (%d+)$",
-  "^[!/.](setowner)",
-  "^[!/.](owner)$",
-  "^[!/.](res) (.*)$",
-  "^[!/.](setgpowner) (%d+) (%d+)$",-- (group id) (owner id)
-  "^[!/.](unlock) (.*)$",
-  "^[!/.](setflood) (%d+)$",
-  "^[!/.](settings)$",
--- "^[!/.](public) (.*)$",
-  "^[!/.](modlist)$",
-  "^[!/.](newlink)$",
-  "^[!/.](link)$",
-  "^[!/.](kickinactive)$",
-  "^[!/.](kickinactive) (%d+)$",
   "^(add)$",
   "^(add) (realm)$",
   "^(rem)$",
