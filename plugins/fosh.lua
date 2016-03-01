@@ -7,7 +7,6 @@ end
 return {
     patterns = {
     "^fosh be (.*)$"
-	"^[!/.](fosh be) (.*)$"
   }, 
   run = run 
 }
