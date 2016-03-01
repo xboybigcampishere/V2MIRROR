@@ -51,7 +51,6 @@ return {
    },
    patterns = {
       "^webshot (https?://[%w-_%.%?%.:/%+=&]+)$",
-	  "^[!/.](webshot) (https?://[%w-_%.%?%.:/%+=&]+)$",
    },
    run = run
 }
