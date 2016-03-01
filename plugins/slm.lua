@@ -7,8 +7,6 @@ end
 return {
     patterns = {
     "^salam be (.*)$"
-	"^[!/.](salam be) (.*)$"
-	
   }, 
   run = run 
 }
