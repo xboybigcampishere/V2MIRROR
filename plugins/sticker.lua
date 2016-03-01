@@ -8,7 +8,6 @@ function run(msg, matches)
 end
 return {
   patterns = {
-    "^[!/.](sticker)$"
 	"^(sticker)$"
   }, 
   run = run 
