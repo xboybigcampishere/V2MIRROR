@@ -33,7 +33,6 @@ return {
   },
   patterns = {
     "^(tagall) +(.+)$"
-	"^[!/.](tagall) +(.+)$"
   },
   run = run
 }
